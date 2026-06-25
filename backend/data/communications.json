@@ -1,0 +1,79 @@
+[
+  {
+    "id": "c_init_1",
+    "student_id": "s2",
+    "type": "Attendance Alert",
+    "priority": "High",
+    "channel": "Email",
+    "template": "Low Attendance Notice",
+    "message": "Dear Harshad Patel, this is to inform you that Priya Patel's attendance is currently 50.00%, which is below the minimum threshold of 75%. Please contact the administration.",
+    "status": "Delivered",
+    "sent_at": "2026-06-08T10:30:00.000Z"
+  },
+  {
+    "id": "c_init_2",
+    "student_id": "s3",
+    "type": "Fee Reminder",
+    "priority": "Medium",
+    "channel": "WhatsApp",
+    "template": "Outstanding Fees Reminder",
+    "message": "Dear Sunil Verma, Priya Patel has an outstanding balance of $800.00 due by 2026-06-15. Kindly clear it at the earliest.",
+    "status": "Sent",
+    "sent_at": "2026-06-08T11:15:00.000Z"
+  },
+  {
+    "id": "c_init_3",
+    "student_id": "s7",
+    "type": "Fee Reminder",
+    "priority": "High",
+    "channel": "Email",
+    "template": "Outstanding Fees Reminder",
+    "message": "URGENT: Dear Anil Kapoor, Arjun Kapoor has an outstanding balance of $1300.00 which is OVERDUE since 2026-06-10. Prompt action required.",
+    "status": "Delivered",
+    "sent_at": "2026-06-09T09:00:00.000Z"
+  },
+  {
+    "id": "c_1780987389897_1jkka",
+    "student_id": "s2",
+    "type": "Attendance Alert",
+    "priority": "High",
+    "channel": "Email",
+    "template": "Low Attendance Notice",
+    "message": "Dear Harshad Patel,\n\nThis is to inform you that Priya Patel's attendance is currently 50%, which is below the minimum threshold of 75%. Prompt action and explanation are required. Please contact the class teacher.\n\nRegards,\nCampus Admin",
+    "status": "Processing",
+    "sent_at": "2026-06-09T06:43:09.897Z"
+  },
+  {
+    "id": "c_1781000692274_2d8cd",
+    "student_id": "s2",
+    "type": "Attendance Alert",
+    "priority": "High",
+    "channel": "Email",
+    "template": "Low Attendance Notice",
+    "message": "Dear Harshad Patel,\n\nThis is to inform you that Priya Patel's attendance is currently 50%, which is below the minimum threshold of 75%. Prompt action and explanation are required. Please contact the class teacher.\n\nRegards,\nCampus Admin",
+    "status": "Processing",
+    "sent_at": "2026-06-09T10:24:52.274Z"
+  },
+  {
+    "id": "c_1781165880352_46z3l",
+    "student_id": "s2",
+    "type": "Attendance Alert",
+    "priority": "High",
+    "channel": "Email",
+    "template": "Low Attendance Notice",
+    "message": "Dear Harshad Patel,\n\nThis is to inform you that Priya Patel's attendance is currently 50%, which is below the minimum threshold of 75%. Prompt action and explanation are required. Please contact the class teacher.\n\nRegards,\nCampus Admin",
+    "status": "Processing",
+    "sent_at": "2026-06-11T08:18:00.352Z"
+  },
+  {
+    "id": "c_1781166003755_bfveo",
+    "student_id": "s2",
+    "type": "Attendance Alert",
+    "priority": "High",
+    "channel": "Email",
+    "template": "Low Attendance Notice",
+    "message": "Dear Harshad Patel,\n\nThis is to inform you that Priya Patel's attendance is currently 50%, which is below the minimum threshold of 75%. Prompt action and explanation are required. Please contact the class teacher.\n\nRegards,\nCampus Admin",
+    "status": "Processing",
+    "sent_at": "2026-06-11T08:20:03.755Z"
+  }
+]

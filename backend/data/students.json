@@ -1,0 +1,12 @@
+[
+  { "id": 1, "roll_number": "STU001", "name": "Arjun Sharma", "class_name": "10A", "parent_id": 3, "campus": "Main Campus" },
+  { "id": 2, "roll_number": "STU002", "name": "Divya Patel", "class_name": "10A", "parent_id": 4, "campus": "Main Campus" },
+  { "id": 3, "roll_number": "STU003", "name": "Karan Mehta", "class_name": "10B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 4, "roll_number": "STU004", "name": "Sneha Rao", "class_name": "9A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 5, "roll_number": "STU005", "name": "Rohan Gupta", "class_name": "9B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 6, "roll_number": "STU006", "name": "Anjali Kumar", "class_name": "8A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 7, "roll_number": "STU007", "name": "Vikram Singh", "class_name": "8B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 8, "roll_number": "STU008", "name": "Meera Joshi", "class_name": "7A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 9, "roll_number": "STU009", "name": "Aditya Nair", "class_name": "11A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 10, "roll_number": "STU010", "name": "Pooja Iyer", "class_name": "12A", "parent_id": null, "campus": "Main Campus" }
+]

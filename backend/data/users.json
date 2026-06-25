@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "Abdul Latif",
+    "email": "admin@sgei.edu.in",
+    "password_hash": "$2b$10$rQZ9uAVKjBxPyLwMn2eH7u8Kg1vT3zRpNhEd4FXmW6oI5cYaJbC2e",
+    "password_plain": "Admin@123",
+    "role": "super_admin",
+    "campus": "Main Campus",
+    "contact_phone": "+91 98765 43210",
+    "created_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Mrs. Sonia Sen",
+    "email": "teacher@sgei.edu.in",
+    "password_hash": "$2b$10$rQZ9uAVKjBxPyLwMn2eH7u8Kg1vT3zRpNhEd4FXmW6oI5cYaJbC2e",
+    "password_plain": "Teacher@123",
+    "role": "staff",
+    "campus": "Main Campus",
+    "contact_phone": "+91 98765 11111",
+    "created_at": "2026-01-02T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Rajesh Sharma",
+    "email": "rajesh.sharma@sgei.edu.in",
+    "password_hash": "$2b$10$rQZ9uAVKjBxPyLwMn2eH7u8Kg1vT3zRpNhEd4FXmW6oI5cYaJbC2e",
+    "password_plain": "Parent@123",
+    "role": "parent",
+    "campus": "Main Campus",
+    "contact_phone": "+91 98765 22222",
+    "linked_student_id": 1,
+    "created_at": "2026-01-03T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Priya Sharma",
+    "email": "priya.sharma@sgei.edu.in",
+    "password_hash": "$2b$10$rQZ9uAVKjBxPyLwMn2eH7u8Kg1vT3zRpNhEd4FXmW6oI5cYaJbC2e",
+    "password_plain": "Parent@123",
+    "role": "parent",
+    "campus": "Main Campus",
+    "contact_phone": "+91 98765 33333",
+    "linked_student_id": 2,
+    "created_at": "2026-01-03T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Arjun Sharma",
+    "email": "stu001@sgei.edu.in",
+    "password_hash": "$2b$10$rQZ9uAVKjBxPyLwMn2eH7u8Kg1vT3zRpNhEd4FXmW6oI5cYaJbC2e",
+    "password_plain": "Student@123",
+    "role": "student",
+    "campus": "Main Campus",
+    "contact_phone": "",
+    "linked_student_id": 1,
+    "created_at": "2026-01-04T00:00:00Z"
+  }
+]

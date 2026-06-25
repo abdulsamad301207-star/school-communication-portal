@@ -1,0 +1,72 @@
+[
+  {
+    "id": "p1",
+    "name": "Rajesh Sharma",
+    "email": "rajesh.sharma@example.com",
+    "phone": "+91 98765 43210",
+    "relation": "Father"
+  },
+  {
+    "id": "p2",
+    "name": "Harshad Patel",
+    "email": "harshad.patel@example.com",
+    "phone": "+91 98765 43211",
+    "relation": "Father"
+  },
+  {
+    "id": "p3",
+    "name": "Sunil Verma",
+    "email": "sunil.verma@example.com",
+    "phone": "+91 98765 43212",
+    "relation": "Father"
+  },
+  {
+    "id": "p4",
+    "name": "Venkat Reddy",
+    "email": "venkat.reddy@example.com",
+    "phone": "+91 98765 43213",
+    "relation": "Father"
+  },
+  {
+    "id": "p5",
+    "name": "Rajendra Singh",
+    "email": "rajendra.singh@example.com",
+    "phone": "+91 98765 43214",
+    "relation": "Father"
+  },
+  {
+    "id": "p6",
+    "name": "Ramesh Iyer",
+    "email": "ramesh.iyer@example.com",
+    "phone": "+91 98765 43215",
+    "relation": "Father"
+  },
+  {
+    "id": "p7",
+    "name": "Anil Kapoor",
+    "email": "anil.kapoor@example.com",
+    "phone": "+91 98765 43216",
+    "relation": "Father"
+  },
+  {
+    "id": "p8",
+    "name": "Sandeep Mehta",
+    "email": "sandeep.mehta@example.com",
+    "phone": "+91 98765 43217",
+    "relation": "Father"
+  },
+  {
+    "id": "p9",
+    "name": "Vijay Gupta",
+    "email": "vijay.gupta@example.com",
+    "phone": "+91 98765 43218",
+    "relation": "Father"
+  },
+  {
+    "id": "p10",
+    "name": "Milind Joshi",
+    "email": "milind.joshi@example.com",
+    "phone": "+91 98765 43219",
+    "relation": "Father"
+  }
+]

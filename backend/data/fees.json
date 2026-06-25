@@ -1,0 +1,72 @@
+[
+  {
+    "student_id": "s1",
+    "total_due": 1200,
+    "paid": 1200,
+    "balance": 0,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s2",
+    "total_due": 1200,
+    "paid": 1000,
+    "balance": 200,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s3",
+    "total_due": 1200,
+    "paid": 400,
+    "balance": 800,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s4",
+    "total_due": 1500,
+    "paid": 1500,
+    "balance": 0,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s5",
+    "total_due": 1500,
+    "paid": 1500,
+    "balance": 0,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s6",
+    "total_due": 1500,
+    "paid": 1200,
+    "balance": 300,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s7",
+    "total_due": 1800,
+    "paid": 500,
+    "balance": 1300,
+    "due_date": "2026-06-10"
+  },
+  {
+    "student_id": "s8",
+    "total_due": 1800,
+    "paid": 1800,
+    "balance": 0,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s9",
+    "total_due": 1800,
+    "paid": 1800,
+    "balance": 0,
+    "due_date": "2026-06-15"
+  },
+  {
+    "student_id": "s10",
+    "total_due": 1800,
+    "paid": 1800,
+    "balance": 0,
+    "due_date": "2026-06-15"
+  }
+]

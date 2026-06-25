@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "All Parents", "description": "All registered parent accounts", "member_count": 348 },
+  { "id": 2, "name": "All Students", "description": "All enrolled students", "member_count": 500 },
+  { "id": 3, "name": "Fee Defaulters", "description": "Students with pending fees", "member_count": 42 },
+  { "id": 4, "name": "Low Attendance", "description": "Students below 85% attendance", "member_count": 18 },
+  { "id": 5, "name": "Class 10A Parents", "description": "Parents of Class 10A students", "member_count": 38 },
+  { "id": 6, "name": "Class 10B Parents", "description": "Parents of Class 10B students", "member_count": 36 }
+]

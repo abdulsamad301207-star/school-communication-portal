@@ -1,0 +1,14 @@
+[
+  { "id": 1, "student_id": 1, "date": "2026-06-01", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 2, "student_id": 1, "date": "2026-06-02", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 3, "student_id": 1, "date": "2026-06-03", "status": "absent", "marked_by": 2, "period": "Full Day" },
+  { "id": 4, "student_id": 1, "date": "2026-06-04", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 5, "student_id": 1, "date": "2026-06-05", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 6, "student_id": 1, "date": "2026-06-08", "status": "absent", "marked_by": 2, "period": "Full Day" },
+  { "id": 7, "student_id": 1, "date": "2026-06-09", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 8, "student_id": 1, "date": "2026-06-10", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 9, "student_id": 1, "date": "2026-06-11", "status": "absent", "marked_by": 2, "period": "Full Day" },
+  { "id": 10, "student_id": 2, "date": "2026-06-01", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 11, "student_id": 2, "date": "2026-06-02", "status": "present", "marked_by": 2, "period": "Full Day" },
+  { "id": 12, "student_id": 2, "date": "2026-06-03", "status": "present", "marked_by": 2, "period": "Full Day" }
+]

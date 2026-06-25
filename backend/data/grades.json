@@ -1,0 +1,182 @@
+[
+  {
+    "student_id": "s1",
+    "subject": "Mathematics",
+    "marks": 85,
+    "grade": "A"
+  },
+  {
+    "student_id": "s1",
+    "subject": "Science",
+    "marks": 78,
+    "grade": "B"
+  },
+  {
+    "student_id": "s1",
+    "subject": "English",
+    "marks": 90,
+    "grade": "A"
+  },
+  {
+    "student_id": "s2",
+    "subject": "Mathematics",
+    "marks": 62,
+    "grade": "C"
+  },
+  {
+    "student_id": "s2",
+    "subject": "Science",
+    "marks": 55,
+    "grade": "D"
+  },
+  {
+    "student_id": "s2",
+    "subject": "English",
+    "marks": 70,
+    "grade": "B"
+  },
+  {
+    "student_id": "s3",
+    "subject": "Mathematics",
+    "marks": 45,
+    "grade": "E"
+  },
+  {
+    "student_id": "s3",
+    "subject": "Science",
+    "marks": 50,
+    "grade": "D"
+  },
+  {
+    "student_id": "s3",
+    "subject": "English",
+    "marks": 61,
+    "grade": "C"
+  },
+  {
+    "student_id": "s4",
+    "subject": "Mathematics",
+    "marks": 92,
+    "grade": "A+"
+  },
+  {
+    "student_id": "s4",
+    "subject": "Science",
+    "marks": 95,
+    "grade": "A+"
+  },
+  {
+    "student_id": "s4",
+    "subject": "English",
+    "marks": 88,
+    "grade": "A"
+  },
+  {
+    "student_id": "s5",
+    "subject": "Mathematics",
+    "marks": 74,
+    "grade": "B"
+  },
+  {
+    "student_id": "s5",
+    "subject": "Science",
+    "marks": 81,
+    "grade": "A"
+  },
+  {
+    "student_id": "s5",
+    "subject": "English",
+    "marks": 72,
+    "grade": "B"
+  },
+  {
+    "student_id": "s6",
+    "subject": "Mathematics",
+    "marks": 38,
+    "grade": "F"
+  },
+  {
+    "student_id": "s6",
+    "subject": "Science",
+    "marks": 42,
+    "grade": "E"
+  },
+  {
+    "student_id": "s6",
+    "subject": "English",
+    "marks": 55,
+    "grade": "D"
+  },
+  {
+    "student_id": "s7",
+    "subject": "Mathematics",
+    "marks": 80,
+    "grade": "A"
+  },
+  {
+    "student_id": "s7",
+    "subject": "Science",
+    "marks": 84,
+    "grade": "A"
+  },
+  {
+    "student_id": "s7",
+    "subject": "English",
+    "marks": 75,
+    "grade": "B"
+  },
+  {
+    "student_id": "s8",
+    "subject": "Mathematics",
+    "marks": 95,
+    "grade": "A+"
+  },
+  {
+    "student_id": "s8",
+    "subject": "Science",
+    "marks": 92,
+    "grade": "A+"
+  },
+  {
+    "student_id": "s8",
+    "subject": "English",
+    "marks": 90,
+    "grade": "A"
+  },
+  {
+    "student_id": "s9",
+    "subject": "Mathematics",
+    "marks": 68,
+    "grade": "B"
+  },
+  {
+    "student_id": "s9",
+    "subject": "Science",
+    "marks": 70,
+    "grade": "B"
+  },
+  {
+    "student_id": "s9",
+    "subject": "English",
+    "marks": 82,
+    "grade": "A"
+  },
+  {
+    "student_id": "s10",
+    "subject": "Mathematics",
+    "marks": 88,
+    "grade": "A"
+  },
+  {
+    "student_id": "s10",
+    "subject": "Science",
+    "marks": 91,
+    "grade": "A+"
+  },
+  {
+    "student_id": "s10",
+    "subject": "English",
+    "marks": 85,
+    "grade": "A"
+  }
+]

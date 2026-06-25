@@ -1,0 +1,4 @@
+[
+  { "id": 1, "rule_name": "First Warning", "threshold_percent": 85, "template_id": 2, "channels": ["inapp", "email"], "cooldown_days": 7, "is_active": true },
+  { "id": 2, "rule_name": "Critical Warning", "threshold_percent": 75, "template_id": 2, "channels": ["inapp", "email"], "cooldown_days": 3, "is_active": true }
+]
