@@ -4,7 +4,7 @@
     "user_id": 1,
     "subject": "Test Subject",
     "message": "Test from backend check",
-    "status": "open",
+    "status": "resolved",
     "created_at": "2026-06-27T11:03:11.528Z"
   },
   {
@@ -20,7 +20,7 @@
     "user_id": 5,
     "subject": "Bug Test Request",
     "message": "Testing help request submission",
-    "status": "open",
+    "status": "resolved",
     "created_at": "2026-06-27T11:53:03.272Z"
   },
   {
@@ -28,7 +28,7 @@
     "user_id": 5,
     "subject": "Test",
     "message": "Hello",
-    "status": "open",
+    "status": "resolved",
     "created_at": "2026-06-27T11:54:35.594Z"
   }
 ]

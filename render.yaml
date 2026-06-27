@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sgei-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    region: singapore
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: sgei_super_secret_change_in_production
+      - key: FRONTEND_URL
+        value: https://school-communication-portal.vercel.app
