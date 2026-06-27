@@ -26,7 +26,7 @@ export default function Attendance() {
         data.forEach(rec => {
           if (rec.student) {
             stuMap[rec.student.id] = rec.student;
-            recMap[rec.student.roll_number] = rec.status;
+            recMap[rec.student.roll_number] = rec.status || 'present';
           }
         });
         setStudents(Object.values(stuMap));

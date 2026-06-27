@@ -1,14 +1,19 @@
 const router = require('express').Router();
 const auth = require('../middleware/authMiddleware');
-const { read, write, nextId } = require('../db');
+const { read, write, nextId, interpolate, capitalizeSubject } = require('../db');
 
 router.get('/', auth(['super_admin', 'staff']), (req, res) => {
   let messages = read('messages');
   const { type, status, search } = req.query;
   if (type) messages = messages.filter(m => m.message_type === type);
   if (status) messages = messages.filter(m => m.status === status);
-  if (search) messages = messages.filter(m => m.subject.toLowerCase().includes(search.toLowerCase()));
-  res.json(messages.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
+  if (search) messages = messages.filter(m => (m.subject || '').toString().toLowerCase().includes(search.toLowerCase()));
+  const result = messages.map(m => ({
+    ...m,
+    subject: capitalizeSubject(interpolate(m.subject, null)),
+    body_html: interpolate(m.body_html || m.body, null)
+  }));
+  res.json(result.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
 });
 
 router.get('/:id', auth(['super_admin', 'staff']), (req, res) => {
@@ -16,7 +21,12 @@ router.get('/:id', auth(['super_admin', 'staff']), (req, res) => {
   const msg = messages.find(m => m.id === parseInt(req.params.id));
   if (!msg) return res.status(404).json({ error: 'Not found' });
   const recipients = read('message_recipients').filter(r => r.message_id === msg.id);
-  res.json({ ...msg, recipients });
+  res.json({ 
+    ...msg, 
+    subject: capitalizeSubject(interpolate(msg.subject, null)),
+    body_html: interpolate(msg.body_html || msg.body, null),
+    recipients 
+  });
 });
 
 router.post('/', auth(['super_admin', 'staff']), (req, res) => {

@@ -16,7 +16,16 @@ router.post('/suggest', auth(['super_admin', 'staff']), async (req, res) => {
     } catch (e) { /* fall through to mock */ }
   }
   // Mock suggestion
-  res.json({ suggestion: `Dear Parent,\n\nWe hope this message finds you well. ${body ? body.replace(/<[^>]+>/g, '') : 'Please find the following important notice regarding your child.'}\n\nThank you for your continued support and cooperation.\n\nWarm regards,\nSri Gowthami Educational Institutions\nMain Campus` });
+  let cleanBody = (typeof body === 'string' ? body : String(body || '')).replace(/<[^>]+>/g, '').trim();
+  // Strip leading greetings (Dear Parent, Dear Parents, etc.)
+  cleanBody = cleanBody.replace(/^(dear\s+(parents?|parents\s+and\s+students|parents\s+and\s+teachers|teachers?|students?)\b[,\s\-\!\.]*)/i, '').trim();
+  // Strip leading "We hope this message finds you well." (in case it's already there)
+  cleanBody = cleanBody.replace(/^we\s+hope\s+this\s+message\s+finds\s+you\s+well\b[,\s\-\!\.]*/i, '').trim();
+  // Strip trailing signature/footers
+  cleanBody = cleanBody.replace(/(regards|warm\s+regards|thank\s+you\s+for\s+your\s+continued\s+support\s+and\s+cooperation|thank\s+you|sri\s+gowthami\s+educational\s+institutions|main\s+campus)[^]*$/i, '').trim();
+
+  const suggestionText = `Dear Parent,\n\nWe hope this message finds you well. ${cleanBody || 'Please find the following important notice regarding your child.'}\n\nThank you for your continued support and cooperation.\n\nWarm regards,\nSri Gowthami Educational Institutions\nMain Campus`;
+  res.json({ suggestion: suggestionText });
 });
 
 module.exports = router;

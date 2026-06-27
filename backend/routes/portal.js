@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const auth = require('../middleware/authMiddleware');
-const { read, write } = require('../db');
+const { read, write, interpolate, capitalizeSubject } = require('../db');
 
 // Inbox - messages for the logged-in parent/student
 router.get('/inbox', auth(['parent', 'student']), (req, res) => {
@@ -8,10 +8,19 @@ router.get('/inbox', auth(['parent', 'student']), (req, res) => {
   const recipients = read('message_recipients').filter(r => r.user_id === userId);
   const messages = read('messages');
   const type = req.query.type;
+  const student = read('students').find(s => s.id === req.user.linked_student_id);
+  
   let result = recipients.map(r => {
     const msg = messages.find(m => m.id === r.message_id);
     if (!msg) return null;
-    return { ...msg, delivery_status: r.delivery_status, read_at: r.read_at, recipient_id: r.id };
+    return { 
+      ...msg, 
+      subject: capitalizeSubject(interpolate(msg.subject, student)),
+      body_html: interpolate(msg.body_html || msg.body, student),
+      delivery_status: r.delivery_status, 
+      read_at: r.read_at, 
+      recipient_id: r.id 
+    };
   }).filter(Boolean);
   if (type) result = result.filter(m => m.message_type === type);
   res.json(result.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
@@ -30,7 +39,14 @@ router.get('/inbox/:id', auth(['parent', 'student']), (req, res) => {
     write('message_recipients', recipients);
   }
   const msg = read('messages').find(m => m.id === msgId);
-  res.json({ ...msg, ...recipients[idx] });
+  if (!msg) return res.status(404).json({ error: 'Not found' });
+  const student = read('students').find(s => s.id === req.user.linked_student_id);
+  res.json({ 
+    ...msg, 
+    subject: capitalizeSubject(interpolate(msg.subject, student)),
+    body_html: interpolate(msg.body_html || msg.body, student),
+    ...recipients[idx] 
+  });
 });
 
 // Attendance for parent/student

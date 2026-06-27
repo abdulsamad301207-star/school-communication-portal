@@ -39,9 +39,9 @@
     "id": 5,
     "message_id": 6,
     "user_id": 3,
-    "delivery_status": "delivered",
+    "delivery_status": "read",
     "delivered_at": "2026-06-13T12:30:00.061Z",
-    "read_at": null,
+    "read_at": "2026-06-27T06:51:15.840Z",
     "channel": "inapp"
   },
   {
@@ -318,9 +318,9 @@
     "id": 36,
     "message_id": 15,
     "user_id": 3,
-    "delivery_status": "delivered",
+    "delivery_status": "read",
     "delivered_at": "2026-06-25T09:51:35.629Z",
-    "read_at": null,
+    "read_at": "2026-06-27T06:51:10.093Z",
     "channel": "inapp"
   },
   {
@@ -345,9 +345,9 @@
     "id": 39,
     "message_id": 16,
     "user_id": 3,
-    "delivery_status": "delivered",
+    "delivery_status": "read",
     "delivered_at": "2026-06-25T09:51:51.026Z",
-    "read_at": null,
+    "read_at": "2026-06-27T06:51:05.813Z",
     "channel": "inapp"
   },
   {
@@ -372,9 +372,9 @@
     "id": 42,
     "message_id": 17,
     "user_id": 3,
-    "delivery_status": "delivered",
+    "delivery_status": "read",
     "delivered_at": "2026-06-25T09:51:53.090Z",
-    "read_at": null,
+    "read_at": "2026-06-27T06:51:02.110Z",
     "channel": "inapp"
   },
   {
@@ -417,8 +417,89 @@
     "id": 47,
     "message_id": 18,
     "user_id": 5,
-    "delivery_status": "delivered",
+    "delivery_status": "read",
     "delivered_at": "2026-06-25T09:53:33.797Z",
+    "read_at": "2026-06-27T06:51:32.036Z",
+    "channel": "inapp"
+  },
+  {
+    "id": 48,
+    "message_id": 19,
+    "user_id": 3,
+    "delivery_status": "read",
+    "delivered_at": "2026-06-27T06:52:16.339Z",
+    "read_at": "2026-06-27T09:15:31.617Z",
+    "channel": "inapp"
+  },
+  {
+    "id": 49,
+    "message_id": 19,
+    "user_id": 4,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T06:52:16.339Z",
+    "read_at": null,
+    "channel": "inapp"
+  },
+  {
+    "id": 50,
+    "message_id": 19,
+    "user_id": 5,
+    "delivery_status": "read",
+    "delivered_at": "2026-06-27T06:52:16.339Z",
+    "read_at": "2026-06-27T06:52:46.115Z",
+    "channel": "inapp"
+  },
+  {
+    "id": 51,
+    "message_id": 20,
+    "user_id": 3,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T09:00:16.636Z",
+    "read_at": null,
+    "channel": "inapp"
+  },
+  {
+    "id": 52,
+    "message_id": 20,
+    "user_id": 4,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T09:00:16.636Z",
+    "read_at": null,
+    "channel": "inapp"
+  },
+  {
+    "id": 53,
+    "message_id": 20,
+    "user_id": 5,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T09:00:16.636Z",
+    "read_at": null,
+    "channel": "inapp"
+  },
+  {
+    "id": 54,
+    "message_id": 21,
+    "user_id": 3,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T09:11:12.565Z",
+    "read_at": null,
+    "channel": "inapp"
+  },
+  {
+    "id": 55,
+    "message_id": 21,
+    "user_id": 4,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T09:11:12.565Z",
+    "read_at": null,
+    "channel": "inapp"
+  },
+  {
+    "id": 56,
+    "message_id": 21,
+    "user_id": 5,
+    "delivery_status": "delivered",
+    "delivered_at": "2026-06-27T09:11:12.565Z",
     "read_at": null,
     "channel": "inapp"
   }

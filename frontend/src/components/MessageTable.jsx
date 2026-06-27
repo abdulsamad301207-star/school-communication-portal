@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import StatusBadge from './StatusBadge';
 import { ChevronRight, ChevronDown, Paperclip } from 'lucide-react';
 
@@ -41,9 +41,8 @@ export default function MessageTable({ messages, showPagination = false }) {
               const deliveryPct = msg.recipients_count ? Math.round((msg.delivered_count / msg.recipients_count) * 100) : 0;
               const isExpanded = expandedId === msg.id;
               return (
-                <>
+                <Fragment key={msg.id}>
                   <tr 
-                    key={msg.id} 
                     className={`hover:bg-[#222222]/50 transition-colors cursor-pointer group ${isExpanded ? 'bg-[#222222]/30' : ''}`} 
                     onClick={() => toggleExpand(msg.id)}
                   >
@@ -99,7 +98,7 @@ export default function MessageTable({ messages, showPagination = false }) {
                       </td>
                     </tr>
                   )}
-                </>
+                </Fragment>
               );
             })}
           </tbody>

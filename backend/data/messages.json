@@ -237,7 +237,7 @@
   },
   {
     "id": 18,
-    "subject": "attendance",
+    "subject": "Attendance Alert — Low Attendance Warning",
     "message_type": "attendance",
     "body_html": "Dear Parent,\n\nWe hope this message finds you well. Dear Parent,Your child's attendance has fallen below {{threshold}}%. Current: {{current}}%.Please ensure regular attendance. Further absence may require explanation.\n\nThank you for your continued support and cooperation.\n\nWarm regards,\nSri Gowthami Educational Institutions\nMain Campus",
     "attachment_url": null,
@@ -248,5 +248,47 @@
     "created_at": "2026-06-25T09:53:33.782Z",
     "recipients_count": 100,
     "delivered_count": 100
+  },
+  {
+    "id": 19,
+    "subject": "Attendance Alert — Low Attendance Warning",
+    "message_type": "attendance",
+    "body_html": "Dear Parent,\n\nWe hope this message finds you well. Dear Parent,Your child's attendance has fallen below {{threshold}}%. Current: {{current}}%.Please ensure regular attendance. Further absence may require explanation.\n\nThank you for your continued support and cooperation.\n\nWarm regards,\nSri Gowthami Educational Institutions\nMain Campus",
+    "attachment_url": null,
+    "sender_id": 1,
+    "status": "sent",
+    "scheduled_at": null,
+    "sent_at": "2026-06-27T06:52:16.333Z",
+    "created_at": "2026-06-27T06:52:16.333Z",
+    "recipients_count": 500,
+    "delivered_count": 500
+  },
+  {
+    "id": 20,
+    "subject": "Annual Sports Meet 2026",
+    "message_type": "event",
+    "body_html": "<p>Dear Parents, Join us for the annual sports meet on Friday.</p>",
+    "attachment_url": null,
+    "sender_id": 1,
+    "status": "sent",
+    "scheduled_at": null,
+    "sent_at": "2026-06-27T09:00:16.635Z",
+    "created_at": "2026-06-27T09:00:16.635Z",
+    "recipients_count": 5,
+    "delivered_count": 5
+  },
+  {
+    "id": 21,
+    "subject": "Annual Sports Meet 2026",
+    "message_type": "event",
+    "body_html": "<p>Dear Parents, Join us for the annual sports meet on Friday.</p>",
+    "attachment_url": null,
+    "sender_id": 1,
+    "status": "sent",
+    "scheduled_at": null,
+    "sent_at": "2026-06-27T09:11:12.564Z",
+    "created_at": "2026-06-27T09:11:12.564Z",
+    "recipients_count": 5,
+    "delivered_count": 5
   }
 ]
