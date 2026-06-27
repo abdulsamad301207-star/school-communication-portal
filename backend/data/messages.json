@@ -290,5 +290,33 @@
     "created_at": "2026-06-27T09:11:12.564Z",
     "recipients_count": 5,
     "delivered_count": 5
+  },
+  {
+    "id": 22,
+    "subject": "Test Circular",
+    "message_type": "circular",
+    "body_html": "Dear Parent, This is a test.",
+    "attachment_url": null,
+    "sender_id": 2,
+    "status": "sent",
+    "scheduled_at": null,
+    "sent_at": "2026-06-27T11:53:03.151Z",
+    "created_at": "2026-06-27T11:53:03.151Z",
+    "recipients_count": 0,
+    "delivered_count": 0
+  },
+  {
+    "id": 23,
+    "subject": "Test",
+    "message_type": "circular",
+    "body_html": "Test",
+    "attachment_url": null,
+    "sender_id": 1,
+    "status": "sent",
+    "scheduled_at": null,
+    "sent_at": "2026-06-27T11:54:35.482Z",
+    "created_at": "2026-06-27T11:54:35.482Z",
+    "recipients_count": 0,
+    "delivered_count": 0
   }
 ]

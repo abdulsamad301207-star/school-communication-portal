@@ -1,14 +1,17 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useHelp } from '../context/HelpContext';
 import { 
   LayoutDashboard, Send, FileText, Users, 
-  History, Calendar, BarChart3, Settings, LogOut 
+  History, Calendar, BarChart3, Settings, LogOut, HelpCircle 
 } from 'lucide-react';
 
 export default function Sidebar() {
   const { user, logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
+  const helpCtx = useHelp();
+  const openCount = helpCtx?.openCount ?? 0;
 
   const nav = [
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
@@ -18,6 +21,7 @@ export default function Sidebar() {
     { name: 'History', path: '/history', icon: History },
     { name: 'Attendance', path: '/attendance', icon: Calendar },
     { name: 'Reports', path: '/reports', icon: BarChart3 },
+    { name: 'Support', path: '/help-requests', icon: HelpCircle, badge: openCount },
     { name: 'Settings', path: '/settings', icon: Settings },
   ];
 
@@ -48,7 +52,14 @@ export default function Sidebar() {
               }`}
             >
               <item.icon size={18} />
-              {item.name}
+              <span className="flex-1">{item.name}</span>
+              {item.badge > 0 && (
+                <span className={`min-w-[20px] h-5 px-1.5 rounded-full text-[11px] font-bold flex items-center justify-center animate-pulse ${
+                  active ? 'bg-white text-[#C0001A]' : 'bg-[#C0001A] text-white'
+                }`}>
+                  {item.badge > 99 ? '99+' : item.badge}
+                </span>
+              )}
             </Link>
           );
         })}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../context/AuthContext';
-import { Bell, LogOut, FileText, ChevronRight, X, Calendar, CheckCircle2, AlertTriangle, Paperclip } from 'lucide-react';
+import { Bell, LogOut, FileText, ChevronRight, X, Calendar, CheckCircle2, AlertTriangle, Paperclip, HelpCircle, Send } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Inbox() {
@@ -10,6 +10,11 @@ export default function Inbox() {
   const [activeMessage, setActiveMessage] = useState(null);
   const [attendance, setAttendance] = useState(null);
   const [attendanceLoading, setAttendanceLoading] = useState(false);
+  const [helpSubject, setHelpSubject] = useState('');
+  const [helpMessage, setHelpMessage] = useState('');
+  const [helpRequests, setHelpRequests] = useState([]);
+  const [submittingHelp, setSubmittingHelp] = useState(false);
+  const [helpSuccess, setHelpSuccess] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -33,8 +38,24 @@ export default function Inbox() {
           console.error(err);
           setAttendanceLoading(false);
         });
+    } else if (activeTab === 'help') {
+      axios.get('/api/v1/portal/help').then(res => setHelpRequests(res.data)).catch(console.error);
     }
   }, [activeTab]);
+
+  const submitHelpRequest = async (e) => {
+    e.preventDefault();
+    setSubmittingHelp(true);
+    try {
+      const res = await axios.post('/api/v1/portal/help', { subject: helpSubject, message: helpMessage });
+      setHelpRequests([res.data, ...helpRequests]);
+      setHelpSubject('');
+      setHelpMessage('');
+      setHelpSuccess(true);
+      setTimeout(() => setHelpSuccess(false), 3000);
+    } catch(err) { console.error(err); }
+    setSubmittingHelp(false);
+  };
 
   const handleViewMessage = (msg) => {
     // Open modal immediately with current local data
@@ -114,7 +135,7 @@ export default function Inbox() {
               ))}
             </div>
           </>
-        ) : (
+        ) : activeTab === 'attendance' ? (
           <>
             <h1 className="text-2xl font-bold mb-6">Attendance</h1>
             
@@ -185,7 +206,61 @@ export default function Inbox() {
               <div className="text-center py-12 text-gray-500">No student profile linked.</div>
             )}
           </>
-        )}
+        ) : activeTab === 'help' ? (
+          <>
+            <h1 className="text-2xl font-bold mb-6">Help Center</h1>
+            
+            <div className="bg-[#1A1A1A] border border-gray-800 rounded-2xl p-5 mb-6">
+              <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <HelpCircle className="text-[#FFB800]" size={20} /> Contact Staff
+              </h2>
+              {helpSuccess && (
+                <div className="mb-4 p-3 rounded-lg bg-green-900/30 border border-green-500/50 text-green-400 text-sm flex items-center gap-2">
+                  <CheckCircle2 size={16} /> Request sent successfully!
+                </div>
+              )}
+              <form onSubmit={submitHelpRequest} className="space-y-4">
+                <div>
+                  <label className="text-xs font-medium text-gray-400 mb-1 block">Subject</label>
+                  <input type="text" required value={helpSubject} onChange={e => setHelpSubject(e.target.value)}
+                    className="w-full bg-[#111] border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-[#FFB800] transition-colors"
+                    placeholder="Brief description of the issue" />
+                </div>
+                <div>
+                  <label className="text-xs font-medium text-gray-400 mb-1 block">Message</label>
+                  <textarea required value={helpMessage} onChange={e => setHelpMessage(e.target.value)}
+                    rows={4}
+                    className="w-full bg-[#111] border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-[#FFB800] transition-colors resize-none"
+                    placeholder="How can we help you?" />
+                </div>
+                <button type="submit" disabled={submittingHelp || !helpSubject || !helpMessage}
+                  className="w-full flex items-center justify-center gap-2 bg-[#C0001A] hover:bg-[#A00016] text-white text-sm font-bold py-2.5 rounded-lg transition-colors disabled:opacity-50">
+                  <Send size={16} /> {submittingHelp ? 'Sending...' : 'Submit Request'}
+                </button>
+              </form>
+            </div>
+
+            <h3 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Your Requests</h3>
+            <div className="space-y-3">
+              {helpRequests.length === 0 ? (
+                <div className="text-center p-8 text-gray-500 bg-[#1A1A1A] rounded-2xl border border-gray-800 text-sm">
+                  No help requests yet.
+                </div>
+              ) : helpRequests.map(req => (
+                <div key={req.id} className="bg-[#1A1A1A] border border-gray-800 rounded-xl p-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <span className={`text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${
+                      req.status === 'open' ? 'bg-amber-500/10 text-amber-500 border border-amber-500/20' : 'bg-green-500/10 text-green-400 border border-green-500/20'
+                    }`}>{req.status}</span>
+                    <span className="text-xs text-gray-500">{new Date(req.created_at).toLocaleDateString()}</span>
+                  </div>
+                  <h3 className="text-sm font-bold text-white mb-1">{req.subject}</h3>
+                  <p className="text-xs text-gray-400">{req.message}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : null}
       </main>
 
       {/* Message Details Modal */}
@@ -262,6 +337,13 @@ export default function Inbox() {
         >
           <Calendar size={20} />
           <span className="text-[10px] font-medium">Attendance</span>
+        </button>
+        <button 
+          onClick={() => setActiveTab('help')}
+          className={`flex flex-col items-center gap-1 transition-colors ${activeTab === 'help' ? 'text-[#FFB800]' : 'text-gray-500 hover:text-gray-300'}`}
+        >
+          <HelpCircle size={20} />
+          <span className="text-[10px] font-medium">Help</span>
         </button>
         <button 
           onClick={handleLogout} 

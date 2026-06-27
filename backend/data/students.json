@@ -8,5 +8,15 @@
   { "id": 7, "roll_number": "STU007", "name": "Vikram Singh", "class_name": "8B", "parent_id": null, "campus": "Main Campus" },
   { "id": 8, "roll_number": "STU008", "name": "Meera Joshi", "class_name": "7A", "parent_id": null, "campus": "Main Campus" },
   { "id": 9, "roll_number": "STU009", "name": "Aditya Nair", "class_name": "11A", "parent_id": null, "campus": "Main Campus" },
-  { "id": 10, "roll_number": "STU010", "name": "Pooja Iyer", "class_name": "12A", "parent_id": null, "campus": "Main Campus" }
+  { "id": 10, "roll_number": "STU010", "name": "Pooja Iyer", "class_name": "12A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 11, "roll_number": "STU011", "name": "Rahul Verma", "class_name": "10A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 12, "roll_number": "STU012", "name": "Neha Reddy", "class_name": "10A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 13, "roll_number": "STU013", "name": "Siddharth Bose", "class_name": "10A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 14, "roll_number": "STU014", "name": "Ananya Das", "class_name": "10B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 15, "roll_number": "STU015", "name": "Ravi Teja", "class_name": "10B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 16, "roll_number": "STU016", "name": "Kavya Menon", "class_name": "10B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 17, "roll_number": "STU017", "name": "Abhishek Dubey", "class_name": "9A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 18, "roll_number": "STU018", "name": "Simran Kaur", "class_name": "9A", "parent_id": null, "campus": "Main Campus" },
+  { "id": 19, "roll_number": "STU019", "name": "Amit Desai", "class_name": "9B", "parent_id": null, "campus": "Main Campus" },
+  { "id": 20, "roll_number": "STU020", "name": "Priya Nair", "class_name": "9B", "parent_id": null, "campus": "Main Campus" }
 ]

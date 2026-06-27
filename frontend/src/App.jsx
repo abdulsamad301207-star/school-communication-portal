@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { HelpProvider } from './context/HelpContext';
 
 // Set base URL for API
 axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
@@ -16,6 +17,7 @@ import History from './pages/admin/History';
 import Attendance from './pages/admin/Attendance';
 import Reports from './pages/admin/Reports';
 import Settings from './pages/admin/Settings';
+import HelpRequests from './pages/admin/HelpRequests';
 // Portal Pages
 import PortalLogin from './pages/portal/PortalLogin';
 import Inbox from './pages/portal/Inbox';
@@ -62,6 +64,7 @@ function AppRoutes() {
       <Route path="/history" element={<ProtectedRoute allowedRoles={['super_admin', 'staff']}><History /></ProtectedRoute>} />
       <Route path="/attendance" element={<ProtectedRoute allowedRoles={['super_admin', 'staff']}><Attendance /></ProtectedRoute>} />
       <Route path="/reports" element={<ProtectedRoute allowedRoles={['super_admin', 'staff']}><Reports /></ProtectedRoute>} />
+      <Route path="/help-requests" element={<ProtectedRoute allowedRoles={['super_admin', 'staff']}><HelpRequests /></ProtectedRoute>} />
       <Route path="/settings" element={<ProtectedRoute allowedRoles={['super_admin', 'staff']}><Settings /></ProtectedRoute>} />
 
 
@@ -78,7 +81,9 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <AppRoutes />
+        <HelpProvider>
+          <AppRoutes />
+        </HelpProvider>
       </BrowserRouter>
     </AuthProvider>
   );

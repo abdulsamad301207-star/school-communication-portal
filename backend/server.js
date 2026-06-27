@@ -19,6 +19,7 @@ app.use('/api/v1/ai', require('./routes/ai'));
 app.use('/api/v1/portal', require('./routes/portal'));
 app.use('/api/v1/reports', require('./routes/reports'));
 app.use('/api/v1/dashboard', require('./routes/dashboard'));
+app.use('/api/v1/help', require('./routes/help'));
 
 // Health check
 app.get('/api/v1/health', (req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }));

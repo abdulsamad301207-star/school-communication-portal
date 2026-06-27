@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const auth = require('../middleware/authMiddleware');
-const { read, write, interpolate, capitalizeSubject } = require('../db');
+const { read, write, interpolate, capitalizeSubject, nextId } = require('../db');
 
 // Inbox - messages for the logged-in parent/student
 router.get('/inbox', auth(['parent', 'student']), (req, res) => {
@@ -74,6 +74,32 @@ router.get('/fees', auth(['parent', 'student']), (req, res) => {
       { date: '2026-01-08', description: 'Term 2 Fee', amount: 12500, receipt_no: 'RCP002', status: 'paid' }
     ]
   });
+});
+
+// Get user's help requests
+router.get('/help', auth(['parent', 'student']), (req, res) => {
+  const requests = read('help_requests').filter(r => r.user_id === req.user.id);
+  res.json(requests.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
+});
+
+// Submit a new help request
+router.post('/help', auth(['parent', 'student']), (req, res) => {
+  const { subject, message } = req.body;
+  if (!subject || !message) return res.status(400).json({ error: 'Subject and message are required' });
+  
+  const requests = read('help_requests');
+  const newRequest = {
+    id: nextId(requests),
+    user_id: req.user.id,
+    subject,
+    message,
+    status: 'open',
+    created_at: new Date().toISOString()
+  };
+  
+  requests.push(newRequest);
+  write('help_requests', requests);
+  res.json(newRequest);
 });
 
 module.exports = router;
